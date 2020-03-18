@@ -1,22 +1,23 @@
 ﻿using UnityEngine;
 
-public class DragHandler : MonoBehaviour
+/*
+    "RAW" DragHandler script without RotationHandler addon
+
+    To use it as mentioned in demo:
+    1) put handler on character(make sure that character has RigidBody and Collider)
+    2) modify object that you want to be dragged:
+        - add Collider,
+        - add Rigidbody, 
+        - check IsKinematic ON,
+        - modify Constraints freezes
+    3) ready to test
+*/
+
+public class raw_DragHandler : MonoBehaviour
 {
     private GameObject _draggableObject;
 
-    [SerializeField]
-    [Tooltip("Check this field to allow extra dragged object rotation.")]
-    private bool IsRotational = false;
-
     public static bool IsCarrying = false;
-
-    private void Start()
-    {
-        if(IsRotational)
-        {
-            RotationHandler.IsEnabled = true;
-        }
-    }
 
     private void Update()
     {
@@ -40,11 +41,6 @@ public class DragHandler : MonoBehaviour
                 _draggableObject.transform.parent = null;
 
                 _draggableObject = null;
-
-                if (IsRotational)
-                {
-                    EditSourceObject();
-                }
             }
 
             IsCarrying = false;
@@ -56,25 +52,6 @@ public class DragHandler : MonoBehaviour
         if (block.gameObject.CompareTag("Draggable") & IsCarrying == false)
         {
             _draggableObject = block.gameObject;
-
-            if(IsRotational)
-            {
-                EditSourceObject();
-            }
-        }
-    }
-
-    private void EditSourceObject()
-    {
-        var test = RotationHandler.source;
-
-        if(test == null)
-        {
-            RotationHandler.source = _draggableObject;
-        }
-        else
-        {
-            RotationHandler.source = null;
         }
     }
 }

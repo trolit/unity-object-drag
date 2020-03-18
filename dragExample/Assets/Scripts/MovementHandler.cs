@@ -34,15 +34,15 @@ public class MovementHandler : MonoBehaviour
     private void Update()
     {
         // Stop walk animation
-        if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.S) ||
-            Input.GetKeyUp(KeyCode.D))
+        if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.A) ||
+            Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.D))
         {
             _animator.SetBool("Move", false);
         }
 
         // Run walk animation
-        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) ||
-            Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) ||
+            Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
         {
             _animator.SetBool("Move", true);
         }
