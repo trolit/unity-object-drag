@@ -2,16 +2,9 @@
 
 public class DragHandler : MonoBehaviour
 {
-    private GameObject _player;
-
     private GameObject _draggableObject;
 
     public static bool IsCarrying = false;
-
-    private void Start()
-    {
-        _player = GameObject.FindWithTag("Player");
-    }
 
     private void Update()
     {
@@ -21,7 +14,7 @@ public class DragHandler : MonoBehaviour
             {
                 _draggableObject.GetComponent<BoxCollider>().enabled = false;
 
-                _draggableObject.transform.parent = _player.transform;
+                _draggableObject.transform.parent = gameObject.transform;
 
                 IsCarrying = true;
             }
@@ -43,7 +36,7 @@ public class DragHandler : MonoBehaviour
 
     private void OnCollisionStay(Collision block)
     {
-        if (block.gameObject.tag == "Draggable" & IsCarrying == false)
+        if (block.gameObject.CompareTag("Draggable") & IsCarrying == false)
         {
             _draggableObject = block.gameObject;
         }
