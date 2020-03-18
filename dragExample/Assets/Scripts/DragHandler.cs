@@ -4,13 +4,19 @@ public class DragHandler : MonoBehaviour
 {
     private GameObject _draggableObject;
 
+    [SerializeField]
+    [Tooltip("Check this to allow extra dragged object rotation.")]
+    private bool IsRotational = false;
+
     public static bool IsCarrying = false;
 
-    private Vector2 startingPos;
-
-    private Vector2 currentPos;
-
-    private GameObject tmp;
+    private void Start()
+    {
+        if(IsRotational)
+        {
+            RotationHandler.IsEnabled = true;
+        }
+    }
 
     private void Update()
     {
@@ -25,40 +31,6 @@ public class DragHandler : MonoBehaviour
                 IsCarrying = true;
             }
         }
-        else if (Input.GetKeyUp(KeyCode.Space))
-        {
-            if (_draggableObject != null)
-            {
-                tmp = _draggableObject;
-
-                _draggableObject.GetComponent<Rigidbody>().isKinematic = false;
-
-                var rigidbody = _draggableObject.GetComponent<Rigidbody>();
-                rigidbody.angularVelocity = Vector3.zero;
-
-                //if (gameObject.transform.rotation.y >= -90)
-                //{
-                //    rigidbody.velocity += Vector3.up * Physics.gravity.y * Time.deltaTime;
-                //}
-                //else if (gameObject.transform.rotation.y == 180)
-                //{
-                //    _draggableObject.GetComponent<Rigidbody>().AddForce(-transform.forward, ForceMode.VelocityChange);
-                //}
-                //else if (gameObject.transform.rotation.y == 0)
-                //{
-                //    _draggableObject.GetComponent<Rigidbody>().AddForce(transform.forward, ForceMode.VelocityChange);
-                //}
-                //else if (gameObject.transform.rotation.y >= 90)
-                //{
-                //    _draggableObject.GetComponent<Rigidbody>().AddForce(transform.right, ForceMode.VelocityChange);
-                //}
-
-                // rigidbody.velocity += Vector3.down * Physics.gravity.y * 555 * Time.deltaTime;
-
-                _draggableObject.GetComponent<Rigidbody>().AddForce(transform.forward, ForceMode.Impulse);
-                Invoke("ReturnIsKinematic", 5f);
-            }
-        }
         else
         {
             if (_draggableObject != null)
@@ -68,10 +40,15 @@ public class DragHandler : MonoBehaviour
                 _draggableObject.transform.parent = null;
 
                 _draggableObject = null;
+
+                if (IsRotational)
+                {
+                    EditSourceObject();
+                }
             }
 
             IsCarrying = false;
-        }
+        }      
     }
 
     private void OnCollisionStay(Collision block)
@@ -80,12 +57,24 @@ public class DragHandler : MonoBehaviour
         {
             _draggableObject = block.gameObject;
 
-            startingPos = block.gameObject.transform.position;
+            if(IsRotational)
+            {
+                EditSourceObject();
+            }
         }
     }
-    
-    private void ReturnIsKinematic()
+
+    private void EditSourceObject()
     {
-        tmp.GetComponent<Rigidbody>().isKinematic = true;
+        var test = RotationHandler.source;
+
+        if(test == null)
+        {
+            RotationHandler.source = _draggableObject;
+        }
+        else
+        {
+            RotationHandler.source = null;
+        }
     }
 }
