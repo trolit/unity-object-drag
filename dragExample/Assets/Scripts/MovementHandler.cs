@@ -9,6 +9,10 @@ public class MovementHandler : MonoBehaviour
     [SerializeField]
     public float Speed;
 
+    [SerializeField]
+    [Tooltip("Set this property to false if you want the dragged object to be rotated within character.")]
+    private bool DontInheritFacingDirection = true;
+
     private float _startingSpeed;
 
     private float _carrySpeed;
@@ -60,7 +64,7 @@ public class MovementHandler : MonoBehaviour
         {
             _transform.AddForce(new Vector3(0, 0, 5) * Speed, ForceMode.VelocityChange);
 
-            if (DragHandler.IsCarrying == false)
+            if (DragHandler.IsCarrying == false || DontInheritFacingDirection == false)
                 _transform.rotation = Quaternion.LookRotation(Vector3.forward);
         }
 
@@ -69,7 +73,7 @@ public class MovementHandler : MonoBehaviour
         {
             _transform.AddForce(new Vector3(-5, 0, 0) * Speed, ForceMode.VelocityChange);
 
-            if (DragHandler.IsCarrying == false)
+            if (DragHandler.IsCarrying == false || DontInheritFacingDirection == false)
                 _transform.rotation = Quaternion.LookRotation(Vector3.left);
         }
 
@@ -78,7 +82,7 @@ public class MovementHandler : MonoBehaviour
         {
             _transform.AddForce(new Vector3(0, 0, -5) * Speed, ForceMode.VelocityChange);
 
-            if (DragHandler.IsCarrying == false)
+            if (DragHandler.IsCarrying == false || DontInheritFacingDirection == false)
                 _transform.rotation = Quaternion.LookRotation(Vector3.back);
         }
 
@@ -87,7 +91,7 @@ public class MovementHandler : MonoBehaviour
         {
             _transform.AddForce(new Vector3(5, 0, 0) * Speed, ForceMode.VelocityChange);
 
-            if (DragHandler.IsCarrying == false)
+            if (DragHandler.IsCarrying == false || DontInheritFacingDirection == false)
                 _transform.rotation = Quaternion.LookRotation(Vector3.right);
         }
     }

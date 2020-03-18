@@ -22,7 +22,7 @@ public class DragHandler : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Space))
         {
-            if (_draggableObject != null)
+            if (_draggableObject != null && IsCarrying == false)
             {
                 _draggableObject.GetComponent<Collider>().enabled = false;
 

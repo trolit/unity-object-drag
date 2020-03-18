@@ -3333,6 +3333,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 1
+  LockFaceDirection: 1
 --- !u!136 &1400425448
 CapsuleCollider:
   m_ObjectHideFlags: 0
