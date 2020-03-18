@@ -55,7 +55,6 @@ public class MovementHandler : MonoBehaviour
             Speed = _startingSpeed;
         }
 
-
         // Move forward
         if (Input.GetKey(KeyCode.W))
         {
@@ -91,8 +90,5 @@ public class MovementHandler : MonoBehaviour
             if (DragHandler.IsCarrying == false)
                 _transform.rotation = Quaternion.LookRotation(Vector3.right);
         }
-
-        // Apply little falling force
-        _transform.AddForce(new Vector3(0, -2, 0) * Speed, ForceMode.VelocityChange);
     }
 }
