@@ -9,7 +9,8 @@
         - add Collider,
         - add Rigidbody, 
         - check IsKinematic ON,
-        - modify Constraints freezes
+        - modify Constraints freezes,
+        - set tag 'Draggable'
     3) ready to test
 */
 
