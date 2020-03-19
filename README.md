@@ -2,7 +2,7 @@
 
 <h2>Description</h2>
 
-<p align="justify">Repository shows simple idea on how to implement object drag in Unity(especially for games that make use of top down view). I've decided to share it because when my project needed something similiar, most of the Web results concerned mouse Drag&Drop functionality. However I succeed to find tip with <em>gameObject.transform.parent</em>(Unity forum If I remember correctly). Making script to work flawlessly(without errors) took me some time but I think I got it. I used it for minigame puzzle. <a href="https://youtu.be/W4FGTbqTwsY">Here is demo</a> showing object drag in practice. Demo project was made in <strong>Unity 2019.3.3f1 (64-bit)</strong>. </p>
+<p align="justify">Repository shows simple idea on how to implement object drag in Unity(especially for games that make use of top down view). I've decided to share it because when my project needed something similiar, most of the Web results concerned mouse Drag&Drop functionality. However I succeed to find tip with <em>gameObject.transform.parent</em>(Unity forum If I remember correctly). Making script to work flawlessly(without errors) took me some time but I think I got it. I used it for minigame puzzle. <a href="https://youtu.be/W4FGTbqTwsY">Here is the demo</a> showing object drag in practice. Template project for this repository was made in <strong>Unity 2019.3.3f1 (64-bit)</strong>. </p>
 
 <h2>Content</h2>
 
