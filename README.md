@@ -18,9 +18,17 @@
 
 <p align="justify">When looking at example with inherit facing, you probably noticed problem that the text also reacts on changing direction. To solve this for e.g. you can place on the draggable object script called <em>LockRotation</em>. See the result.</p>
 
+<br/>
+<br/>
+<br/>
+
 <p align="center"><img src="https://github.com/trolit/unity-object-drag/blob/images/images/lockTextRotation.gif" width="500" alt="Gif showing blocked text rotation"></p>
 
 <p align="justify">I've also mentioned rotation possiblity. If you take a look again at the first image showing Unity inspector fragment, notice that <em>DragHandler</em> script also comes with bool variable. This one let's you turn on and off rotation on dragged objects. If you keep variable checked, you will be able to rotate dragged object by using <em>Left</em> and <em>Right</em> arrow key. As before, check the outcome below. </p>
+
+<br/>
+<br/>
+<br/>
 
 <p align="center"><img src="https://github.com/trolit/unity-object-drag/blob/images/images/rotatingObject.gif"  width="500" alt="Gif showing dragged object rotation"></p>
 
