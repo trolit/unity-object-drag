@@ -8,13 +8,29 @@
 
 <p align="justify">In the repo you will find scene used to show the results, Slime Rabbit character, and some scripts. For the purpose of repo I extended drag with ability to rotate moved objects. It's used by <em>DragHandler</em> and rotation is handled by script named <em>RotationHandler</em>. Script containing only drag functionality is called <em>raw_DragHandler</em>. There is also short description on how to use it properly. If you plan to use the option with rotation, <em>Movement Handler</em> has bool variable that you see on the picture below called <em>Dont Inherit Facing Direction</em>.</p>
 
+<br/>
+<br/>
+<br/>
+
 <p align="center"><img src="https://github.com/trolit/unity-object-drag/blob/images/images/inspectorScreenshot.PNG" width="500" alt="Unity Inspector fragment"></p>
 
+<br/>
+<br/>
+<br/>
+
 <p align="justify">What it means is that you can decide whether you want dragged objects to be positioned in front of the character when changing direction(inherit facing) or not(don't inherit facing). See the difference underneath:</p>
+
+<br/>
+<br/>
+<br/>
 
 | Don't Inherit Facing | Inherit Facing |
 | :---: | :---: |
 | <img src="https://github.com/trolit/unity-object-drag/blob/images/images/dontInheritFacing.gif" alt="Don't Inherit Facing example" width="500" /> | <img src="https://github.com/trolit/unity-object-drag/blob/images/images/inheritFacing.gif" alt="Inherit Facing example" width="500" /> |
+
+<br/>
+<br/>
+<br/>
 
 <p align="justify">When looking at example with inherit facing, you probably noticed problem that the text also reacts on changing direction. To solve this for e.g. you can place on the draggable object script called <em>LockRotation</em>. See the result.</p>
 
@@ -23,6 +39,10 @@
 <br/>
 
 <p align="center"><img src="https://github.com/trolit/unity-object-drag/blob/images/images/lockTextRotation.gif" width="500" alt="Gif showing blocked text rotation"></p>
+
+<br/>
+<br/>
+<br/>
 
 <p align="justify">I've also mentioned rotation possiblity. If you take a look again at the first image showing Unity inspector fragment, notice that <em>DragHandler</em> script also comes with bool variable. This one let's you turn on and off rotation on dragged objects. If you keep variable checked, you will be able to rotate dragged object by using <em>Left</em> and <em>Right</em> arrow key. As before, check the outcome below. </p>
 
