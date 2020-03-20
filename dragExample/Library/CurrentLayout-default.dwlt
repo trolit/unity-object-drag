@@ -114,7 +114,7 @@ MonoBehaviour:
   m_MinSize: {x: 710, y: 392}
   m_MaxSize: {x: 18005, y: 14042}
   vertical: 1
-  controlID: 60
+  controlID: 166
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_MinSize: {x: 710, y: 392}
   m_MaxSize: {x: 18005, y: 14042}
   vertical: 0
-  controlID: 61
+  controlID: 167
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -165,7 +165,7 @@ MonoBehaviour:
   m_MinSize: {x: 201, y: 342}
   m_MaxSize: {x: 4001, y: 8042}
   vertical: 1
-  controlID: 67
+  controlID: 38
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -242,7 +242,7 @@ MonoBehaviour:
   m_MinSize: {x: 232, y: 392}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 104
+  controlID: 97
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -507,9 +507,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: ca2e0000
+      m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 70fbffff
+      m_ExpandedIDs: 62fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -595,9 +595,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 3.636328, y: -10.907632, z: -3.721637}
+    m_Target: {x: 3.2012053, y: -8.4564495, z: 6.3191657}
     speed: 2
-    m_Value: {x: 3.636328, y: -10.907632, z: -3.721637}
+    m_Value: {x: 3.2012053, y: -8.4564495, z: 6.3191657}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -643,13 +643,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.6616561, y: 0.0040514367, z: -0.0035722526, w: -0.7498292}
+    m_Target: {x: -0.43632382, y: 0.0075609507, z: -0.003662864, w: -0.899785}
     speed: 2
-    m_Value: {x: -0.66051024, y: 0.004056666, z: -0.0035660604, w: -0.7507976}
+    m_Value: {x: -0.4349602, y: 0.0075662024, z: -0.0036514038, w: -0.9004106}
   m_Size:
-    m_Target: 23.033264
+    m_Target: 28.43894
     speed: 2
-    m_Value: 22.0414
+    m_Value: 27.214296
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -713,19 +713,19 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets
   m_ViewMode: 1
   m_StartGridSize: 43
   m_LastFolders:
-  - Assets/Scripts
+  - Assets
   m_LastFoldersGridSize: 43
   m_LastProjectPath: D:\GitHub\unity-object-drag\dragExample
   m_LockTracker:
     m_IsLocked: 1
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 2e360000
-    m_LastClickedID: 13870
+    m_SelectedIDs: 1a360000
+    m_LastClickedID: 13850
     m_ExpandedIDs: 000000001a36000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
