@@ -6,7 +6,7 @@
 
 <h2>Content</h2>
 
-<p align="justify">In the repo you will find scene used to show the results, Slime Rabbit character, and some scripts. For the purpose of repo I extended drag with ability to rotate moved objects. It's used by <em>Drag Handler</em> and rotation is handled by script named <em>Rotation Handler</em>. Script containing only drag functionality is called <em>raw_DragHandler</em>. There is also short description on how to use it properly. If you plan to use the option with rotation, <em>Movement Handler</em> has bool variable that you see on the picture below called <em>Dont Inherit Facing Direction</em>.</p>
+<p align="justify">In the repo you will find scene used to show the results, Slime Rabbit character, and some scripts. For the purpose of repo I extended drag with ability to rotate moved objects. It's used by <em>Drag Handler</em> and rotation is handled by script named <em>Rotation Handler</em>. Script containing only drag functionality is called <em>raw_DragHandler</em>. There is also short description on how to use it properly. Note on the picture below that, <em>Movement Handler</em> has bool variable called <em>Dont Inherit Facing Direction</em>.</p>
 
 <br/>
 <br/>
@@ -44,7 +44,7 @@
 <br/>
 <br/>
 
-<p align="justify">I've also mentioned rotation possiblity. If you take a look again at the first image showing Unity inspector fragment, notice that <em>Drag Handler</em> script also comes with bool variable. This one let's you turn on and off rotation on dragged objects. If you keep variable checked, you will be able to rotate dragged object by using <em>Left</em> and <em>Right</em> arrow key. As before, check the outcome below. </p>
+<p align="justify">What about rotation? If you take a look again at the first image showing Unity inspector fragment, notice that <em>Drag Handler</em> script also comes with bool variable. This one let's you turn on and off rotation on dragged objects. If you keep variable checked, you will be able to rotate dragged object by using <em>Left</em> and <em>Right</em> arrow key. As before, check the outcome below. </p>
 
 <br/>
 <br/>
