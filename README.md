@@ -2,11 +2,11 @@
 
 <h2>Description</h2>
 
-<p align="justify">Repository shows simple idea on how to implement object drag in Unity(especially for games that make use of top down view). I've decided to share it because when my project needed something similiar, most of the Web results concerned mouse Drag&Drop functionality. However I succeed to find tip with <em>gameObject.transform.parent</em>(Unity forum If I remember correctly). Making script to work flawlessly(without errors) took me some time but I think I got it. I used it for minigame puzzle. <a href="https://youtu.be/W4FGTbqTwsY">Here is the demo</a> showing object drag in practice. Template project for this repository was made in <strong>Unity 2019.3.3f1 (64-bit)</strong>. </p>
+<p align="justify">Repository shows simple idea on how to implement object drag in Unity(especially for games that make use of top down view). I've decided to make one because when my project needed something similiar, most of the Web results concerned mouse Drag&Drop functionality. However I succeed to find tip with <em>gameObject.transform.parent</em>. Making script to work flawlessly(without errors) took me some time but I think I got it. I used it for minigame puzzle. <a href="https://youtu.be/W4FGTbqTwsY">Here is the demo</a> showing object drag in practice. Template project for this repository was made in <strong>Unity 2019.3.3f1 (64-bit)</strong>. </p>
 
 <h2>Content</h2>
 
-<p align="justify">In the repo you will find scene used to show the results, Slime Rabbit character, and some scripts. For the purpose of repo I extended drag with ability to rotate moved objects. It's used by <em>DragHandler</em> and rotation is handled by script named <em>RotationHandler</em>. Script containing only drag functionality is called <em>raw_DragHandler</em>. There is also short description on how to use it properly. If you plan to use the option with rotation, <em>Movement Handler</em> has bool variable that you see on the picture below called <em>Dont Inherit Facing Direction</em>.</p>
+<p align="justify">In the repo you will find scene used to show the results, Slime Rabbit character, and some scripts. For the purpose of repo I extended drag with ability to rotate moved objects. It's used by <em>Drag Handler</em> and rotation is handled by script named <em>Rotation Handler</em>. Script containing only drag functionality is called <em>raw_DragHandler</em>. There is also short description on how to use it properly. If you plan to use the option with rotation, <em>Movement Handler</em> has bool variable that you see on the picture below called <em>Dont Inherit Facing Direction</em>.</p>
 
 <br/>
 <br/>
@@ -32,7 +32,7 @@
 <br/>
 <br/>
 
-<p align="justify">When looking at example with inherit facing, you probably noticed problem that the text also reacts on changing direction. To solve this for e.g. you can place on the draggable object script called <em>LockRotation</em>. See the result.</p>
+<p align="justify">When looking at example with inherit facing, you probably noticed problem that the text also reacts on changing direction. To solve this for e.g. you can place on the draggable object script called <em>Lock Rotation</em>. See the result.</p>
 
 <br/>
 <br/>
@@ -44,7 +44,7 @@
 <br/>
 <br/>
 
-<p align="justify">I've also mentioned rotation possiblity. If you take a look again at the first image showing Unity inspector fragment, notice that <em>DragHandler</em> script also comes with bool variable. This one let's you turn on and off rotation on dragged objects. If you keep variable checked, you will be able to rotate dragged object by using <em>Left</em> and <em>Right</em> arrow key. As before, check the outcome below. </p>
+<p align="justify">I've also mentioned rotation possiblity. If you take a look again at the first image showing Unity inspector fragment, notice that <em>Drag Handler</em> script also comes with bool variable. This one let's you turn on and off rotation on dragged objects. If you keep variable checked, you will be able to rotate dragged object by using <em>Left</em> and <em>Right</em> arrow key. As before, check the outcome below. </p>
 
 <br/>
 <br/>
